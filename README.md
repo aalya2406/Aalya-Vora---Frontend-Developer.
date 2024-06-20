@@ -1,6 +1,6 @@
 # Food Menu App
 
-Welcome to the Food Menu App repository! This project is designed to showcase various food items from different cuisines, focusing primarily on Indian dishes. Users can browse through food items, view details, and interact with filtering options.
+Welcome to the Food Menu App! This project is designed to showcase various food items immitating that of a food delivery app. Users can browse through food items, view details, and interact with filtering options and more.
 -----
 Features:
 
