@@ -15,3 +15,15 @@ React: Frontend library for building user interfaces.
 JavaScript (ES6+): Modern JavaScript syntax used throughout the project.
 CSS: Styling the components to achieve a clean and aesthetic user interface.
 API Integration: Fetching data from an external API (The Meal DB API) to populate food items.
+
+
+Clone the repository:
+git clone <repository-url>
+cd food-menu-app
+
+Install dependencies:
+npm install
+
+
+Run the application:
+npm start
