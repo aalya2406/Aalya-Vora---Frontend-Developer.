@@ -29,7 +29,9 @@ API Integration: Fetching data from an external API (The Meal DB API) to populat
 -----
 
 Clone the repository:
+
 git clone <repository-url>
+
 cd food-menu-app
 
 Install dependencies:
