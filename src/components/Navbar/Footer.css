@@ -1,0 +1,13 @@
+.footer {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px 0; /* Adjust padding as needed */
+    font-family: Arial, sans-serif; 
+  }
+  
+  .footer-image {
+    max-width: 110px; /* Adjust the maximum width of the image */
+    height: auto;
+  }
+  

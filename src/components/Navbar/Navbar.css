@@ -1,0 +1,56 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between; /* Ensure space between items */
+  }
+
+  
+  .Navbar img.logo {
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* This will push the search bar to the right */
+    justify-content: center; /* Center the menu items */
+  }
+  
+  .navbar-menu li {
+    margin: 0 15px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns search bar to the right */
+    max-width: 300px; /* Optional: Limit the width of the search bar */
+    width: 100%; /* Takes available space */
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input {
+    width: 100%; /* Makes the input take the full width of the parent */
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-left: 10px; /* Space between the icon and the input field */
+  }
+  
+  .navbar-search-icon {
+    height: 20px; /* Adjust the icon size as needed */
+  }
+  

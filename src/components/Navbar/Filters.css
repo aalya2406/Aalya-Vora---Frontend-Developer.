@@ -1,0 +1,82 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f6f1f1;
+    margin-top: 75px;
+    font-family: Arial, sans-serif; 
+  }
+  
+  .filter-tag {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .filter-tag:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .filter-tag.highlighted {
+    background-color:rgb(228, 178, 92);
+    color: white;
+  }
+  
+  .arrow {
+    margin-left: auto;
+  }
+  
+  .arrow.up {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    z-index: 1;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    border-radius: 0 0 20px 20px; 
+  }
+  
+  .area-filters {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .area-filters li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .area-filters button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: peachpuff;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px; 
+  }
+  
+  .area-filters button:hover {
+    background-color: peachpuff;
+  }
+  
+
+  .dropdown input[type="radio"] {
+    margin-right: 5px;
+  }
+  
