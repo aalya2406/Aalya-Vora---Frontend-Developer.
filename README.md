@@ -1,7 +1,7 @@
 # Food Menu App
 
 Welcome to the Food Menu App repository! This project is designed to showcase various food items from different cuisines, focusing primarily on Indian dishes. Users can browse through food items, view details, and interact with filtering options.
-
+-----
 Features:
 
 Navigation Bar
@@ -14,6 +14,7 @@ Modal Details: Clicking on a food item opens a modal displaying additional detai
 
 Pagination: Navigate through multiple pages of food items.
 
+---------
 
 Technologies Used:
 
@@ -25,7 +26,7 @@ CSS: Styling the components to achieve a clean and aesthetic user interface.
 
 API Integration: Fetching data from an external API (The Meal DB API) to populate food items.
 
-
+-----
 
 Clone the repository:
 git clone <repository-url>
