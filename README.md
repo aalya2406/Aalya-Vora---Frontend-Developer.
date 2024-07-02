@@ -20,7 +20,7 @@ Technologies Used:
 
 React: Frontend library for building user interfaces.
 
-JavaScript (ES6+): Modern JavaScript syntax used throughout the project.
+JavaScript : Modern JavaScript syntax used throughout the project.
 
 CSS: Styling the components to achieve a clean and aesthetic user interface.
 
