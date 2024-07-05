@@ -48,7 +48,7 @@ Video Demo:
 
 - Shows how to run it
 
-Features;
+Features:
   
 - Tab display title and logo shown
   
