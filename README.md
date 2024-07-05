@@ -40,3 +40,29 @@ npm install
 
 Run the application:
 npm start
+
+
+-----
+
+Video Demo:
+
+- Shows how to run it
+
+Features;
+  
+- Tab display title and logo shown
+  
+- Search bar
+  
+- Filters
+  
+- Filter By Area shown and working
+  - Can click on a specific item and show its details(scrollable)
+    
+- Page footer
+
+- Clicking on the logo reloads the page
+
+- Adjustable with your screen size 
+
+  
