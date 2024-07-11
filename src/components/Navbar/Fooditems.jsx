@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Fooditems.css'; // Correct the file name here
 import { fetchMealsByArea, fetchMealDetails  } from '../../services/api';
 import './Navbar.css';
+import './Loader'
 // src/components/FoodItems/FoodItems.jsx
-
 
 const FoodItems = ({ selectedArea }) => {
   const [foodItems, setFoodItems] = useState([]);
@@ -16,7 +16,7 @@ const FoodItems = ({ selectedArea }) => {
     const fetchFoodItems = async () => {
       try {
         const meals = await fetchMealsByArea(selectedArea);
-        setFoodItems(meals);
+        setFoodItems(meals.map(meal => ({ ...meal, rating: Math.floor(Math.random() * 5) + 1 }))); // Adding a random rating for demonstration
       } catch (error) {
         console.error('Error fetching food items:', error);
       }
@@ -52,8 +52,15 @@ const FoodItems = ({ selectedArea }) => {
         {paginatedFoodItems.map((item) => (
           <div className="food-item" key={item.idMeal} onClick={() => handleFoodItemClick(item.idMeal)}>
             <img src={item.strMealThumb} alt={item.strMeal} />
-            <h3>{item.strMeal}</h3>
-            <p>Rating: {Math.floor(Math.random() * 5) + 1}/5</p>
+            <div className="food-item-content">
+              <h3>{item.strMeal}</h3>
+              <div className="rating-container">
+                <div className="green-circle">
+                  <span className="star-icon">&#9733;</span>
+                </div>
+                <span className="rating-number">{item.rating}/5</span>
+              </div>
+            </div>
           </div>
         ))}
       </div>
