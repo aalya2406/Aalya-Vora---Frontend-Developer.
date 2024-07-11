@@ -30,9 +30,9 @@ API Integration: Fetching data from an external API (The Meal DB API) to populat
 
 Clone the repository:
 
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/aalya2406/Aalya-Vora---Frontend-Developer..git
 
-cd yourrepository
+cd Aalya-Vora---Frontend-Developer.
 
 
 Install dependencies:
