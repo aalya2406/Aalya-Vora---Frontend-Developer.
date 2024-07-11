@@ -1,49 +1,95 @@
-
+/* src/components/FoodItems/FoodItems.css */
 
 .food-items-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  font-family: Arial, sans-serif; 
+  background-color: #f8f8f8;
 }
 
 .food-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap between items */
 }
 
 .food-item {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  width: 200px;
+  width: 300px; /* Increased width for broader appearance */
+  height: 280px; /* Adjusted height */
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .food-item:hover {
-  transform: scale(1.05);
+  transform: scale(0.95); /* Make smaller on hover */
 }
 
 .food-item img {
   width: 100%;
-  border-radius: 8px;
+  height: 70%; /* Adjusted height for more horizontal appearance */
+  object-fit: cover;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px; /* Rounded bottom corners */
+  border-bottom-right-radius: 17px; /* Rounded bottom corners */
+}
+
+.food-item-content {
+  padding: 8px;
+  /* background-color: #ffffff; */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: left; /* Align titles to the left */
 }
 
 .food-item h3 {
   font-size: 18px;
-  margin: 10px 0;
+  margin: 4px 0;
+  color: #333;
+  font-family:  Arial, sans-serif; /* Use Futura or Arial if available */
+  text-align: left; /* Ensure titles are left-aligned */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 .food-item p {
   font-size: 14px;
   color: #888;
+  text-align: left; /* Align ratings text to the left */
+  font-family: Arial, sans-serif;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: flex-start; /* Align stars to the left */
+  margin-top: 5px;
+}
+
+.rating-stars span {
+  color: #f8ce0b; /* Yellow color for stars */
+  font-size: 18px;
+  margin-right: 2px; /* Add some space between stars */
 }
 
 .modal-overlay {
@@ -100,12 +146,12 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
-  border-radius: 20px; 
-  outline: none; 
+  border-radius: 20px;
+  outline: none;
 }
 
 .pagination button:hover {
-  background-color: rgb(210, 132, 64); 
+  background-color: rgb(210, 132, 64);
 }
 
 .pagination button.active {
@@ -113,5 +159,13 @@
 }
 
 .pagination button:focus {
-  box-shadow: 0 0 0 2px red; 
+  box-shadow: 0 0 0 2px red;
+}
+
+.star-filled {
+  color: #f8ce0b; /* Yellow color for filled stars */
+}
+
+.star-empty {
+  color: #e0e0e0; /* Grey color for empty stars */
 }
