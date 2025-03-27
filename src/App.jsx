@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import './index.css';
 import Navbar from './components/Navbar/Navbar';
-import Filters from './components/Navbar/Filters'; // Import the Filters component
-import FoodItems from './components/Navbar/Fooditems'; // Corrected import
-import Footer from './components/Navbar/Footer'; // Corrected import
-
+import Filters from './components/Navbar/Filters';
+import FoodItems from './components/Navbar/Fooditems';
+import Footer from './components/Navbar/Footer';
 
 function App() {
-  const [selectedArea, setSelectedArea] = useState('Indian'); // Default to Indian
+  const [selectedArea, setSelectedArea] = useState('Indian');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (query) => {
+    setSearchQuery(query); // Update the search query
+  };
 
   return (
     <div className="App">
-      <Navbar />
-      <Filters setSelectedArea={setSelectedArea} /> {/* Pass setSelectedArea to Filters */}
-      <FoodItems selectedArea={selectedArea} /> {/* Pass selectedArea to FoodItems */}
+      <Navbar handleSearch={handleSearch} /> {/* Pass handleSearch to Navbar */}
+      <Filters setSelectedArea={setSelectedArea} />
+      <FoodItems selectedArea={selectedArea} searchQuery={searchQuery} /> {/* Pass searchQuery to FoodItems */}
       <Footer />
     </div>
   );
 }
 
 export default App;
-

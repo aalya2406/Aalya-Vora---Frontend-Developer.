@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Fooditems.css'; // Correct the file name here
-import { fetchMealsByArea, fetchMealDetails  } from '../../services/api';
+import { fetchMealsByArea, fetchMealDetails } from '../../services/api';
 import './Navbar.css';
-import './Loader'
-// src/components/FoodItems/FoodItems.jsx
+import './Loader';
 
-const FoodItems = ({ selectedArea }) => {
+const FoodItems = ({ selectedArea, searchQuery }) => {
   const [foodItems, setFoodItems] = useState([]);
   const [selectedFoodItem, setSelectedFoodItem] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -24,6 +23,10 @@ const FoodItems = ({ selectedArea }) => {
 
     fetchFoodItems();
   }, [selectedArea]);
+
+  const filteredFoodItems = foodItems.filter(item =>
+    item.strMeal.toLowerCase().includes(searchQuery.toLowerCase()) // Filter based on search query
+  );
 
   const handleFoodItemClick = async (id) => {
     try {
@@ -44,7 +47,10 @@ const FoodItems = ({ selectedArea }) => {
     setCurrentPage(pageNumber);
   };
 
-  const paginatedFoodItems = foodItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const paginatedFoodItems = filteredFoodItems.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
     <div className="food-items-container">
@@ -79,8 +85,12 @@ const FoodItems = ({ selectedArea }) => {
       )}
 
       <div className="pagination">
-        {Array.from({ length: Math.ceil(foodItems.length / itemsPerPage) }, (_, index) => (
-          <button key={index} onClick={() => handlePageChange(index + 1)} className={index + 1 === currentPage ? 'active' : ''}>
+        {Array.from({ length: Math.ceil(filteredFoodItems.length / itemsPerPage) }, (_, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageChange(index + 1)}
+            className={index + 1 === currentPage ? 'active' : ''}
+          >
             {index + 1}
           </button>
         ))}
